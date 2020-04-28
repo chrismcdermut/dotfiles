@@ -13,6 +13,13 @@ alias dockerpurge="docker ps -aq | xargs docker rm"
 alias dpsa="docker ps -a"
 
 # Git
+function gnm(){
+  gfo
+  gco origin/master
+  git branch -D master
+  git gc
+  git checkout -b master
+}
 alias gitcano='git add . && git commit --amend --no-edit'
 alias gitlpo='git log --pretty=oneline'
 alias gitlpog='gitlpo --graph'
@@ -42,8 +49,8 @@ alias pipup='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pi
 
 # System
 alias cl='clear && l'
-alias vrc='vim ~/.zshrc'          # You don't want to link this and the next alias, Nick. Trust me.
-alias reload='source ~/.zshrc'    # What happens if you quickly save a bad mistake?
+alias vrc='vim ~/.zshrc'
+alias ns='source ~/.zshrc'
 
 # Tools
 alias job-dsl='java -jar /Users/nrebhun/Development/Tools/job-dsl-plugin-job-dsl-1.51/job-dsl-core/build/libs/job-dsl-core-1.51-standalone.jar'
