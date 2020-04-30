@@ -13,13 +13,6 @@ alias dockerpurge="docker ps -aq | xargs docker rm"
 alias dpsa="docker ps -a"
 
 # Git
-function gnm(){
-  gfo
-  gco origin/master
-  git branch -D master
-  git gc
-  git checkout -b master
-}
 alias gitcano='git add . && git commit --amend --no-edit'
 alias gitlpo='git log --pretty=oneline'
 alias gitlpog='gitlpo --graph'
@@ -28,6 +21,17 @@ alias gwb='git branch | grep \* | sed -n -e "s/^\* //p"'
 alias gtfo='git branch -u origin'
 alias ufm='git checkout master && git push fork master'
 alias gnb='git checkout -b'
+alias gfo='git fetch origin'
+alias gco='git checkout'
+
+# Git Functions
+function gnm(){
+  gfo
+  gco origin/master
+  git branch -D master
+  git gc
+  git checkout -b master
+}
 
 # Homebrew
 alias brewup='brew update && brew upgrade'
