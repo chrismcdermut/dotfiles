@@ -1,0 +1,38 @@
+{
+	"*": {
+		"core": {
+			"disabledPackages": [
+				"language-gfm",
+				"sync-settings-git-location"
+			],
+			"telemetryConsent": "limited"
+		},
+		"editor": {
+			"fontSize": 17,
+			"showIndentGuide": true,
+			"showInvisibles": true
+		},
+		"exception-reporting": {
+			"userId": "08dc8b20-66ed-4810-9837-740bd04fb7f6"
+		},
+		"git-blame": {
+			"columnWidth": 392
+		},
+		"minimap": {
+			"plugins": {
+				"highlight-selected": true,
+				"highlight-selectedDecorationsZIndex": 0
+			}
+		},
+		"sync-settings": {
+			"hiddenSettings": {},
+			"useOtherLocation": true
+		},
+		"tree-view": {
+			"hideVcsIgnoredFiles": true
+		},
+		"sync-settings-folder-location": {
+			"folderPath": "/Users/chrismcdermut/Sites/dotfiles/.atom"
+		}
+	}
+}
