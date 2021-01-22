@@ -69,3 +69,16 @@ frequent_vms=()
 alias vs="print $frequent_vms | xargs vagrant status"
 alias vsh="vagrant ssh"
 alias HULK_SMASH='print $frequent_vms | xargs vagrant destroy'
+
+# Vim Functions
+# function vim() {
+#   args=()
+#   for i in $@; do
+#     if [[ -h $i ]]; then
+#       args+=`readlink $i`
+#     else
+#       args+=$i
+#     fi
+#   done
+#   /usr/local/bin/vim -p "${args[@]}"
+# }

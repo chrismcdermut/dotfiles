@@ -28,11 +28,11 @@
 			"hiddenSettings": {},
 			"useOtherLocation": true
 		},
-		"tree-view": {
-			"hideVcsIgnoredFiles": true
-		},
 		"sync-settings-folder-location": {
 			"folderPath": "/Users/chrismcdermut/Sites/dotfiles/.atom"
+		},
+		"tree-view": {
+			"hideVcsIgnoredFiles": true
 		}
 	}
 }
