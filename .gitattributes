@@ -1,0 +1,4 @@
+# secretfile filter=git-crypt diff=git-crypt
+# secretdir/** filter=git-crypt diff=git-crypt
+.*_history filter=git-crypt diff=git-crypt
+history/** filter=git-crypt diff=git-crypt
