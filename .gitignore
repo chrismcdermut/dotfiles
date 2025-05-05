@@ -1,0 +1,17 @@
+# History and sensitive
+.bash_history
+.zsh_history
+
+# OS junk
+.DS_Store
+
+# Editor folders
+.vscode/
+.idea/
+
+# Terminal state
+.terminal/
+
+# System config that doesn’t need syncing
+.history
+.cache

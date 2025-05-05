@@ -1,0 +1,27 @@
+####################
+# PATH Modifications
+####################
+
+# Android SDK
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home -v 10)
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+export PATH="$PATH:/usr/local/bin"
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+# PHP
+export PATH="/usr/local/opt/php@7.3/bin:/usr/local/opt/php@7.3/sbin:$PATH"
+
+# npm global modules
+export PATH="/usr/local/share/npm/bin:$PATH"
+
+# System paths (ensure these come *after* your custom paths)
+export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
