@@ -5,11 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-###################################CUSTOM-STOOF#######################
-source $HOME/.path
-source $HOME/.env_vars
-source $HOME/.aliases
-
 # ZSH Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -25,6 +20,11 @@ plugins=(
 
 ###################################OH-MY-ZSH#######################
 source $ZSH/oh-my-zsh.sh
+
+###################################CUSTOM-STOOF#######################
+source $HOME/.path
+source $HOME/.env_vars
+source $HOME/.aliases
 
 ###################################USED ZSH CONFIG#######################
 
