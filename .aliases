@@ -12,26 +12,46 @@ alias dockerclean="docker ps -a | egrep 'weeks ago|days ago' | awk '{print $1}' 
 alias dockerpurge="docker ps -aq | xargs docker rm"
 alias dpsa="docker ps -a"
 
-# Git
-alias gcbr='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
-alias gitcano='git add . && git commit --amend --no-edit'
+# Git - General Shortcuts
+alias g='git'
+alias ga='git add'
+alias gs='git status'
+alias gl='git log'
+alias gad='git add .'
+alias ggc='git gc'
 alias gitlpo='git log --pretty=oneline'
 alias gitlpog='gitlpo --graph'
-alias gs='git status'
-alias gwb='git branch | grep \* | sed -n -e "s/^\* //p"'
+
+# Git - Commit & Staging
+alias gcm='git commit -m'
+alias gcam='git commit -am'
+alias gitcano='git add . && git commit --amend --no-edit'
+
+# Git - Branching
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gnb='git checkout -b'
+alias gbd='git branch -D'
+alias gwb='git branch | grep \* | sed -n -e "s/^\* //p"'  # get working branch
+alias gcbr='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
+
+# Git - Remote & Sync
+alias gpull='git pull'
+alias gpullo='git pull origin'
+alias gpusho='git push origin'
+alias gfo='git fetch origin'
 alias gtfo='git branch -u origin'
 alias ufm='git checkout master && git push fork master'
-alias gnb='git checkout -b'
-alias gfo='git fetch origin'
-alias gco='git checkout'
+
+# Git - Stash
+alias gstash='git stash'
+alias gstasha='git stash apply'
 
 # Git Functions
-function gnm(){
+function guma(){
   gfo
-  gco origin/master
-  git branch -D master
-  git gc
-  git checkout -b master
+  gco main
+  gpullo main
 }
 
 # Homebrew
